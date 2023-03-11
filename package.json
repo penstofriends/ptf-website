@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/bridgetf7/ptf-website/issues"
   },
-  "homepage": "https://github.com/bridgetf7/ptf-website#readme"
+  "homepage": "https://github.com/bridgetf7/ptf-website#readme",
+  "dependencies": {
+    "vue-router": "^4.1.6"
+  }
 }

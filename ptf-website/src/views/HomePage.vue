@@ -1,10 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
-    <div class="main">
-        <h1>Pens to Friends</h1>
-    </div>
+<h1>welcome home</h1>
 </template>
-
-
-<style scoped>
-
-</style>
