@@ -7,6 +7,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import NavTab from './components/NavTab.vue';
+import FormButtons from './components/FormButtons.vue'
 </script>
 
 <style scoped>

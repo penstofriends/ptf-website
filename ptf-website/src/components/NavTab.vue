@@ -1,6 +1,7 @@
 <template>
     <header>
         <img alt="logo" class="logo" src="/logoPlaceholder.png" width="125" height="125" />
+        <img alt="logo" class="logo" src="/killjoycat.png" width="125" height="125" />
         <nav>
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/GettingInvolved">Get Involved</RouterLink>
