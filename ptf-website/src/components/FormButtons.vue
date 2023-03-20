@@ -10,7 +10,6 @@
     props: {
       text: {
         type: String,
-        default: "Button"
       },
     },
   };

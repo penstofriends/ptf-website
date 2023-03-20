@@ -1,7 +1,6 @@
 <template>
     <header>
         <img alt="logo" class="logo" src="/logoPlaceholder.png" width="125" height="125" />
-        <img alt="logo" class="logo" src="/killjoycat.png" width="125" height="125" />
         <nav>
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/GettingInvolved">Get Involved</RouterLink>
@@ -32,7 +31,7 @@ nav {
 
 /*active page*/
 nav a.router-link-exact-active {
-    color: white;
+    color: var(--turfGreen);
 }
 
 /*hovering over non-active buttons*/
@@ -42,7 +41,7 @@ nav a.router-link-exact-active:hover {
 
 nav a {
     margin: 0.5rem;
-    color: var(--celadonGreen);
+    color: #646c64;
     display: flex;
     justify-content: center;
     padding: 0 1rem;

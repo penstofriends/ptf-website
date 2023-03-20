@@ -1,5 +1,4 @@
 <template>
-<h1>welcome home</h1>
 <LandingSection />
 <OurStory />
 
