@@ -1,5 +1,5 @@
 <template>
-    <header>
+        <div class="headerNav">
         <img alt="logo" class="logo" src="/logoPlaceholder.png" width="125" height="125" />
         <nav>
             <RouterLink to="/">Home</RouterLink>
@@ -7,18 +7,18 @@
             <RouterLink to="/FrequentQuestions">FAQ</RouterLink>
             <RouterLink to="/ContactUs">Contact Us</RouterLink>
         </nav>
-    </header>
+    </div>
     <RouterView />
 </template>
 
 
 
 <style scoped>
-header{
+
+.headerNav{
     display: flex;
     flex-direction: row;
 }
-
 nav {
     display: flex;
     flex-direction: row;
@@ -56,4 +56,5 @@ nav a:first-of-type {
 img {
     margin: 1rem;
 }
+
 </style>

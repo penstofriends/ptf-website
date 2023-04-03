@@ -20,9 +20,10 @@
 
 
 <style scoped>
-
 h1 {
     text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2.5rem;
 }
 
 p {
@@ -31,6 +32,7 @@ p {
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 0.015rem;
+    margin-left: 3rem
 }
 
 img {
@@ -41,11 +43,10 @@ img {
 .container {
     display: flex;
     flex-direction: row;
-    padding: 3rem;
-    justify-content: center;
+    align-items: center;
 }
 
 img[id="letterPic01"] {
-    margin-left: 15rem;
+    margin-left: 20rem;
 }
 </style>
