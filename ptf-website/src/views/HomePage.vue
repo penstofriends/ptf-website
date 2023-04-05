@@ -1,6 +1,6 @@
 <template>
 <LandingSection />
-<OurStory />
+<!-- <OurStory /> -->
 <LetterExamples />
 </template>
 

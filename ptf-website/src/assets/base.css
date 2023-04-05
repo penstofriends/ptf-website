@@ -2,6 +2,7 @@
 :root {
 --turfGreen:  #6f8c69;
 --celadonGreen: #88A18B;
+--green: #C8C8A9;
 --brown: #423025;
 --ivory: #ede4df;
 }
@@ -23,12 +24,14 @@
 
 
 body {
+  padding: 1rem;
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
   font-size: 16px;
+  overflow: auto;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
