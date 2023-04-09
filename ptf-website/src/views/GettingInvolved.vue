@@ -2,7 +2,12 @@
   <div class="container">
     <div class="virtual">
       <h2>Virtual Letters</h2>
-      <p>[description about virtual letters]</p>
+      <p>[description about virtual letters]
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor odio in massa commodo commodo. 
+        Integer euismod posuere ipsum eget sollicitudin. Ut commodo euismod urna, a lacinia arcu maximus sit amet. 
+        Etiam et sapien sed odio consequat consectetur at nec magna. Morbi pellentesque, mi nec finibus dignissim, 
+        elit ante faucibus ante, in malesuada eros lectus ac purus. 
+      </p>
       <div class="send">
         <img alt="logo" class="logo" src="/logoPlaceholder.png" width="125" height="125" />
         <FormButton text="Send Letter(s)" url="google.com" />
@@ -47,7 +52,6 @@ export default {
   padding: 1rem;
   position: relative;
 }
-
 .virtual::after {
   content: "";
   position: absolute;
@@ -58,7 +62,7 @@ export default {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 0;
   text-align: center;
 }
