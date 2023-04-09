@@ -1,8 +1,10 @@
 <template>
   <h1>Frequently Asked Questions</h1>
   <div class="faq-list">
-    <DropDown v-for="(FAQ, index) in FAQs" :key="index" :question="FAQ.question" :answer="FAQ.answer"
-      :isVisible="FAQ.isVisible" @toggle="toggleAnswer(index)"></DropDown>
+    <div class="faq-item" v-for="(FAQ, index) in FAQs" :key="index">
+      <DropDown :question="FAQ.question" :answer="FAQ.answer"
+        :isVisible="FAQ.isVisible" @toggle="toggleAnswer(index)"></DropDown>
+    </div>
   </div>
 </template>
 
@@ -12,7 +14,7 @@ import { FAQs } from '../FAQs';
 
 export default {
   components: {
-    DropDown,
+    DropDown, 
   },
   data() {
     return {
@@ -34,7 +36,9 @@ h1 {
 
 .faq-list {
   margin-top: 20px;
+  padding: 1rem;
   width: 100%;
+  text-align: center;
 }
 
 .faq-item {

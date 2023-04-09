@@ -24,8 +24,6 @@
 
 
 body {
-  margin: 0rem 1rem 1rem 1rem;
-  padding: 0rem 1rem 1rem 1rem;
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);

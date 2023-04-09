@@ -13,10 +13,14 @@ import NavTab from './components/NavTab.vue';
 </script>
 
 <style>
+body{
+  margin: 0;
+  padding: 0;
+}
 .navTab {
   position: fixed;
   top: 0;
-  left: 2rem;
+  left: 0;
   width: 100%;
   z-index: 1;
 }

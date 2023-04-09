@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h2>sorry, I haven't figured this out yet but annoy my wonderful employee at
-            oj7806@gmail.com, he called me a "MOTHERFUCKERIIUGHW":)</h2>
+        <p>sorry, I haven't figured this out yet but annoy my wonderful employee at
+            oj7806@gmail.com, he called me a "MOTHERFUCKERIIUGHW":)</p>
     </div>
 </template>
 

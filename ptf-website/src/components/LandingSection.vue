@@ -1,7 +1,6 @@
 <template>
     <h1>Pens to Friends</h1>
     <h2>Spreading smiles, one letter at a time</h2>
-    <FormButtons>Leadership position application</FormButtons>
 </template>
 
 

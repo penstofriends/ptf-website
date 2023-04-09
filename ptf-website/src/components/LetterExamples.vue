@@ -1,6 +1,5 @@
 <template>
     <div class="letterExamples">
-        <h2>Letters From Our Volunteers</h2>
         <div class="pictures">
         <img src="/letterPic01.jpg">
         <img src="/letterPic02.jpg">
@@ -13,13 +12,15 @@
 <style scoped>
 img {
     height: 22rem;
-    margin: 0.8rem;
+    margin: 1.5rem;
 }
 
 .pictures{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--celadonGreen);
 }
 </style>
   
