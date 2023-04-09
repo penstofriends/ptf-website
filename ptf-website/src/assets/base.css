@@ -4,12 +4,12 @@
 --celadonGreen: #88A18B;
 --green: #C8C8A9;
 --brown: #423025;
---ivory: #ede4df;
+--ivory: #F6EFEB;
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white-mute);
+  --color-background: var(--ivory);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 

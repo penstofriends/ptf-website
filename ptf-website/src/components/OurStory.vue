@@ -35,15 +35,6 @@
     margin-right: 2.5rem;
   }
   
-  p {
-    max-width: 50rem;
-    text-indent: 3rem;
-    font-size: 1.2rem;
-    font-family: 'Noto Sans', sans-serif;
-    letter-spacing: 0.015rem;
-    margin-bottom: 2rem;
-  }
-  
   .images {
     display: flex;
     justify-content: center;
