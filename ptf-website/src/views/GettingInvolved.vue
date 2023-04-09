@@ -72,6 +72,7 @@ export default {
 h2 {
   font-size: 2rem;
   letter-spacing: 0.02rem;
+  margin-top:0;
   margin-bottom: 0;
   text-align: center;
 }

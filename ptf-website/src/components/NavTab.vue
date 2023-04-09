@@ -6,11 +6,14 @@
         <a href="/FrequentQuestions">FAQ</a>
         <a href="/ContactUs">Contact Us</a>
       </nav>
-      <router-view />
     </div>
   </template>
   
   <style scoped>
+  body {
+    margin: 0;
+  }
+  
   nav {
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 0.1rem;
@@ -19,9 +22,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 1rem;
-    margin-bottom:1rem;
     text-align: center;
+    background-color: white;
+    padding: 1rem 0rem 1rem 0rem;
   }
   
   nav a {
@@ -47,5 +50,4 @@
   nav a.router-link-exact-active:hover {
     background-color: transparent;
   }
-  </style>
-  
+</style>
