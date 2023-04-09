@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="email">
-      <h2>Get in Touch</h2>
+      <h1>Get in Touch</h1>
       <h3>Feel free to contact us with any questions, comments, or feedback you may have. We'll try to get back to you ASAP!!</h3>
       <EmailUs/>
       <FormButton/>

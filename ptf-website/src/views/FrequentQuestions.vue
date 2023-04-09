@@ -27,12 +27,18 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+h1 {
+  text-align: center;
+}
+
 .faq-list {
   margin-top: 20px;
+  width: 100%;
 }
 
 .faq-item {
   margin-bottom: 20px;
+  width: 100%;
 }
 </style>
