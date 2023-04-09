@@ -20,7 +20,7 @@ img {
     flex-direction: row;
     justify-content: center;
     padding: 1rem;
-    background-color: var(--celadonGreen);
+    background-color: var(--green);
 }
 </style>
   

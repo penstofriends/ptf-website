@@ -1,9 +1,12 @@
 <template>
-  <h1>Frequently Asked Questions</h1>
+  <h1>QUESTIONS?</h1>
+  <p>Here are a few of our most commonly asked; if the answer you're looking for is still not here,
+    feel free to contact us.
+  </p>
   <div class="faq-list">
     <div class="faq-item" v-for="(FAQ, index) in FAQs" :key="index">
-      <DropDown :question="FAQ.question" :answer="FAQ.answer"
-        :isVisible="FAQ.isVisible" @toggle="toggleAnswer(index)"></DropDown>
+      <DropDown :question="FAQ.question" :answer="FAQ.answer" :isVisible="FAQ.isVisible" @toggle="toggleAnswer(index)">
+      </DropDown>
     </div>
   </div>
 </template>
@@ -14,7 +17,7 @@ import { FAQs } from '../FAQs';
 
 export default {
   components: {
-    DropDown, 
+    DropDown,
   },
   data() {
     return {
@@ -34,6 +37,10 @@ h1 {
   text-align: center;
 }
 
+p{
+  text-indent: 0;
+  text-align: center;
+}
 .faq-list {
   margin-top: 20px;
   padding: 1rem;
