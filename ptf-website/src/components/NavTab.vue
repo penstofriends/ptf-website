@@ -1,60 +1,51 @@
 <template>
-        <div class="headerNav">
-        <img alt="logo" class="logo" src="/logoPlaceholder.png" width="125" height="125" />
-        <nav>
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/GettingInvolved">Get Involved</RouterLink>
-            <RouterLink to="/FrequentQuestions">FAQ</RouterLink>
-            <RouterLink to="/ContactUs">Contact Us</RouterLink>
-        </nav>
+    <div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/GettingInvolved">Get Involved</a>
+        <a href="/FrequentQuestions">FAQ</a>
+        <a href="/ContactUs">Contact Us</a>
+      </nav>
+      <router-view />
     </div>
-    <RouterView />
-</template>
-
-
-
-<style scoped>
-
-.headerNav{
-    display: flex;
-    flex-direction: row;
-}
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 1.2rem;
+  </template>
+  
+  <style scoped>
+  nav {
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 0.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom:1rem;
     text-align: center;
-}
-
-/*active page*/
-nav a.router-link-exact-active {
-    color: var(--turfGreen);
-}
-
-/*hovering over non-active buttons*/
-nav a.router-link-exact-active:hover {
-    background-color: transparent;
-}
-
-nav a {
-    margin: 0.5rem;
+  }
+  
+  nav a {
+    font-size: 1.2rem;
     color: #646c64;
     display: flex;
     justify-content: center;
     padding: 0 1rem;
+    margin: 0.5rem;
     width: fit-content;
     white-space: nowrap;
-}
-
-nav a:first-of-type {
-    border: 0;
-}
-
-img {
-    margin: 1rem;
-}
-
-</style>
+    text-decoration: none;
+  }
+  
+  nav a:first-of-type {
+    border: none;
+  }
+  
+  nav a.router-link-exact-active {
+    color: var(--turfGreen);
+  }
+  
+  nav a.router-link-exact-active:hover {
+    background-color: transparent;
+  }
+  </style>
+  

@@ -1,17 +1,17 @@
 <template>
-  <header>
-    <NavTab />
-  </header>
+  <div>
+    <header>
+      <NavTab />
+    </header>
+  </div>
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
 import NavTab from './components/NavTab.vue';
-import FormButtons from './components/FormButtons.vue'
 </script>
 
-<style scoped>
-header{
+<style>
+header {
   position: fixed;
   top: 2rem;
   left: 2rem;

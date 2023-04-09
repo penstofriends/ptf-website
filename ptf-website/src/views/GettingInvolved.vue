@@ -1,14 +1,72 @@
+<template>
+  <div class="container">
+    <div class="virtual">
+      <h2>Virtual Letters</h2>
+      <p>[description about virtual letters]</p>
+      <div class="send">
+        <img alt="logo" class="logo" src="/logoPlaceholder.png" width="125" height="125" />
+        <FormButton text="Send Letter(s)" url="google.com" />
+      </div>
+      <div class="recieve">
+        <img alt="logo" class="logo" src="/logoPlaceholder.png" width="125" height="125" />
+        <FormButton text="Receive Letter(s)" url="google.com" />
+      </div>
+    </div>
 
-<script setup>
-import FormButtons from '../components/FormButtons.vue';
+    <div class="physical">
+      <h2>Handwritten/Physical Letters</h2>
+    </div>
+  </div>
+</template>
 
+<script>
+import FormButton from '../components/FormButton.vue';
+
+export default {
+  name: "GettingInvolved",
+  components: {
+    FormButton,
+  },
+};
 </script>
 
-<template>
-<div class="virtual">
-    <h1>Virtual Letters</h1>
-    <p>[description about virtual letters]</p>
-    <FormButtons text="Receive Letters"/>
-</div>
-  </template>
+<style scoped>
+.container {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
 
+.virtual {
+  width: 50%;
+  padding: 1rem;
+}
+
+.physical {
+  width: 50%;
+  padding: 1rem;
+  position: relative;
+}
+
+.virtual::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 1px solid black;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 28rem;
+}
+
+</style>

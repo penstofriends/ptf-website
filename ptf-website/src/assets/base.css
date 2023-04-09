@@ -32,6 +32,8 @@ body {
   line-height: 1.6;
   font-size: 16px;
   overflow: auto;
+  font-family: 'Noto Sans', sans-serif;
+  padding: 1rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

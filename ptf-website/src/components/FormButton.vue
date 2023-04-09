@@ -1,0 +1,51 @@
+<template>
+  <button @click="url">{{ text }}</button>
+</template>
+
+<script>
+export default {
+  name: "FormButton",
+  props: {
+    text: {
+      type: String,
+      required: true
+    },
+    url: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    url() {
+      window.location.href = this.url;
+    }
+  }
+}
+</script>
+
+  
+<style scoped>
+button {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  vertical-align: middle;
+  border: 0.0625rem solid;
+  border-radius: 0.375rem;
+  color: black;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--celadonGreen);
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+}
+
+button:hover {
+  background-color: #2c974b;
+  border-color: #1b1f2326;
+  transition-duration: 0.1s;
+}
+</style>
