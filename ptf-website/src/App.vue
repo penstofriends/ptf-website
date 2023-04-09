@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <header>
       <NavTab />
-    </header>
-  </div>
 </template>
 
 <script setup>

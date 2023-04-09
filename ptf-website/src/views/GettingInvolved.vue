@@ -20,6 +20,12 @@
 
     <div class="physical">
       <h2>Handwritten/Physical Letters</h2>
+      <p>[description about physical letters]
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor odio in massa commodo commodo. 
+        Integer euismod posuere ipsum eget sollicitudin. Ut commodo euismod urna, a lacinia arcu maximus sit amet. 
+        Etiam et sapien sed odio consequat consectetur at nec magna. Morbi pellentesque, mi nec finibus dignissim, 
+        elit ante faucibus ante, in malesuada eros lectus ac purus. 
+      </p>
     </div>
   </div>
 </template>
@@ -45,11 +51,13 @@ export default {
 .virtual {
   width: 50%;
   padding: 1rem;
+  margin: 1rem;
 }
 
 .physical {
   width: 50%;
   padding: 1rem;
+  margin: 1rem;
   position: relative;
 }
 .virtual::after {
