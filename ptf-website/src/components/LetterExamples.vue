@@ -12,7 +12,7 @@
 <style scoped>
 img {
     height: 22rem;
-    margin: 1.5rem;
+    margin: 1.2rem;
 }
 
 .pictures{

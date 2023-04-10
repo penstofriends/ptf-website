@@ -1,5 +1,5 @@
 <template>
-  <h1>Spread the joy</h1>
+  <h1>Spread the Joy</h1>
   <div class="container">
     <div class="virtual">
       <h2>Virtual Letters</h2>
@@ -9,14 +9,16 @@
         Etiam et sapien sed odio consequat consectetur at nec magna. Morbi pellentesque, mi nec finibus dignissim,
         elit ante faucibus ante, in malesuada eros lectus ac purus.
       </p>
+      <div class="buttons">
       <div class="send">
-        <img alt="logo" class="logo" src="/logoPlaceholder.png" width="125" height="125" />
+        <img alt="logo" class="logo" src="/logoPlaceholder.png" width="135" height="135" />
         <FormButton text="Send Letter(s)" url="google.com" />
       </div>
-      <div class="recieve">
-        <img alt="logo" class="logo" src="/logoPlaceholder.png" width="125" height="125" />
+      <div class="receive">
+        <img alt="logo" class="logo" src="/logoPlaceholder.png" width="135" height="135" />
         <FormButton text="Receive Letter(s)" url="google.com" />
       </div>
+    </div>
     </div>
 
     <div class="physical">
@@ -43,6 +45,10 @@ export default {
 </script>
 
 <style scoped>  
+
+  h1 {
+    margin-top: 6rem;
+  }
 
   h2 {
     margin-top: 0;
@@ -81,5 +87,23 @@ export default {
     bottom: 0;
     left: 50%;
     border-left: 1px solid black;
+  }
+
+  .send, .receive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+  }
+
+  .send button, .receive button{
+    margin-top: 1rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 </style>

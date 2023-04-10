@@ -30,14 +30,13 @@ button {
   outline: 0;
   cursor: pointer;
   padding: 0.25rem 1rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.25rem;
   vertical-align: middle;
-  border: 0.0625rem solid;
-  border-radius: 0.375rem;
+  border: none;
   color: black;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: var(--celadonGreen);
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   transition-property: color, background-color, border-color;

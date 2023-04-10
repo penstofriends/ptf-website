@@ -1,8 +1,10 @@
 <template>
   <h1>QUESTIONS?</h1>
+  <div class="description">
   <p>Here are a few of our most commonly asked; if the answer you're looking for is still not here,
     feel free to contact us.
   </p>
+</div>
   <div class="faq-list">
     <div class="faq-item" v-for="(FAQ, index) in FAQs" :key="index">
       <DropDown :question="FAQ.question" :answer="FAQ.answer" :isVisible="FAQ.isVisible" @toggle="toggleAnswer(index)">
@@ -35,6 +37,7 @@ export default {
 <style scoped>
 h1 {
   margin-top: 6rem;
+  margin-bottom: 0;
   text-align: center;
 }
 
@@ -46,11 +49,15 @@ p {
 .faq-list {
   margin: 0 auto;
   max-width: 65rem;
-  text-align: center;
 }
 
 .faq-item {
   margin-bottom: 20px;
   width: 100%;
+}
+
+.description{
+  display: flex;
+  justify-content: center;
 }
 </style>
