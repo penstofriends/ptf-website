@@ -1,26 +1,26 @@
 @import './base.css';
 
 h1 {
-    text-align: center;
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 h2 {
-    font-size: 1.5rem;
-    letter-spacing: 0.02rem;
-    margin-top:0;
-    margin-bottom: 0;
-    text-align: center;
-  }
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  text-align: center;
+}
 
-  p {
-    max-width: 50rem;
-    text-indent: 3rem;
-    font-size: 1rem;
-    font-family: 'Noto Sans', sans-serif;
-    letter-spacing: 0.01rem;
-    margin-bottom: 2rem;
-  }
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  max-width: 50rem;
+  text-indent: 3rem;
+  margin-bottom: 2rem;
+}

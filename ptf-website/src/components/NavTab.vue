@@ -3,7 +3,7 @@
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/GettingInvolved">Get Involved</router-link>
-      <router-link to="/FrequentQuestions">FAQ</router-link>
+      <router-link to="/FrequentQuestions">FAQs</router-link>
       <router-link to="/ContactUs">Contact Us</router-link>
     </nav>
   </div>

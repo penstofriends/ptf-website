@@ -36,20 +36,14 @@ export default {
 
 <style>
 
-
 .faq-question {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
   padding: 0.1rem;
-  background-color: #f5f5f5;
-}
+  background-color: white;
 
-.faq-question h3 {
-  margin: 0;
-  font-size: 20px;
 }
-
 .faq-question {
   max-width: 75rem;
 }

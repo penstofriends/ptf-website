@@ -34,17 +34,18 @@ export default {
 
 <style scoped>
 h1 {
+  margin-top: 6rem;
   text-align: center;
 }
 
-p{
+p {
   text-indent: 0;
   text-align: center;
 }
+
 .faq-list {
-  margin-top: 20px;
-  padding: 1rem;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 65rem;
   text-align: center;
 }
 
