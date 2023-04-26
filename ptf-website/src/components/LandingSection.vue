@@ -2,7 +2,7 @@
     <div class="container">
     <h1>Pens to Friends</h1>
     <h2>Spreading smiles, one letter at a time</h2>
-    <h3>i also didn't develop this part yet, annoy oj7806@gmail.com if you have complaints</h3>
+    <h3>i also didn't develop this part yet</h3>
     </div>
 </template>
 
