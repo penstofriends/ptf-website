@@ -40,9 +40,8 @@ export default {
   position: relative;
 }
 
-h2{
-  font-size: 4rem;
-  margin-bottom: 0;
+h1 {
+  text-align: center;
 }
 
 h3{

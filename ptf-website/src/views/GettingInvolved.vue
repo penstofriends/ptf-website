@@ -48,6 +48,7 @@ export default {
 
   h1 {
     margin-top: 6rem;
+    text-align: center;
   }
 
   h2 {

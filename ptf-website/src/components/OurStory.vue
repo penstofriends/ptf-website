@@ -1,8 +1,11 @@
 <template>
-  <div class="ourStory">
-    <h2>OUR STORY</h2>
-    <div class="container">
-      <div class="text">
+  <div class="container__ourStory">
+    <div class="text__outStory-subheader">
+      <h2>OUR STORY</h2>
+    </div>
+    
+    <div class="container__ourStory-content">
+      <div class="text__ourStory">
         <p>
           In February 2021, Pens to Friends was born in a small town in Arizona, by a group of high schoolers who
           wanted to make the world a little brighter. One of our founders grew up hearing stories of her parents'
@@ -13,33 +16,58 @@
           to band the world together.
         </p>
       </div>
-      <img src="/letterPic02.jpg" alt="picture of a letter resting on a plant">
+      <img class="image__ourStory" src="/letterPic02.jpg" alt="picture of a letter resting on a plant">
     </div>
   </div>
 </template>
 
 <style scoped>
-.ourStory {
+.container__ourStory {
+  display: grid;
+  justify-items: center;
+
+  border-radius: 55px;
+  background: #e0e0e0;
+
+  border-radius: 55px;
+  background: #e0e0e0;
+  box-shadow:  22px 22px 44px #aaa5a2,
+              -22px -22px 44px #ffffff;
+
+  width: 70vw;
+
   padding: 2rem 0;
+  margin: 5rem 0;
 }
 
-.container {
+.container__ourStory-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  max-width: 60rem;
-  margin: 0 auto;
+  max-width: 75%;
 }
 
-.text {
+.text__outStory-subheader {
+  text-align: center;
+
+  width: 20%;
+
+  border-radius: 55px;
+  background: #e0e0e0;
+  box-shadow:  12px 12px 24px #cccccc,
+              -12px -12px 24px #f4f4f4;
+}
+
+.text__ourStory {
   margin-right: 2.5rem;
-  flex: 1;
+  margin-bottom: 1.5rem;
+  max-width: 50%;
 }
 
 
 
-img {
+.image__ourStory {
   height: 22rem;
   margin: 0.8rem;
   display: flex;
@@ -48,17 +76,6 @@ img {
   margin-top: 1.5rem;
 }
 
-img:first-child {
-  margin-left: 0;
-}
 
-h2 {
-  margin-bottom: 0;
-  text-align: center;
-}
 
-p {
-  margin-bottom: 1.5rem;
-  max-width: 45rem;
-}
 </style>
