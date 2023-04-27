@@ -35,6 +35,7 @@ function showNavTab() {
 }
 
 onMounted(() => {  
+  document.querySelector('.navTab').classList.remove('hide')
   window.addEventListener('scroll', showNavTab)
 })
 </script>
@@ -45,6 +46,15 @@ body {
   padding: 0;
 }
 
+.navTab {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 98vw;
+}
+
 .hide {
   opacity: 0;
   animation: pop-out 0.5s;
@@ -53,14 +63,6 @@ body {
 .visible {
   opacity: 1;
   animation: pop-in 0.5s;
-}
-
-.navTab {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 98vw;
 }
 
 .routerView {

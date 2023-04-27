@@ -30,7 +30,7 @@
   background-size: 300% 300%;
   animation: gradient 4s alternate infinite;
 
-  box-shadow: 32px 32px 64px #b8b8b8, -32px -32px 64px #ffffff;
+  box-shadow: 16px 16px 32px #b8b8b8;
 }
 @keyframes gradient {
   0% {
