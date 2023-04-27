@@ -33,9 +33,6 @@
 
   border-radius: 55px;
   background: #e0e0e0;
-
-  border-radius: 55px;
-  background: #e0e0e0;
   box-shadow: 22px 22px 44px #aaa5a2, -22px -22px 44px #ffffff;
 
   width: 70vw;

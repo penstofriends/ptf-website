@@ -13,6 +13,7 @@ import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import NavTab from './components/NavTab.vue'
 
+
 const shown = ref(false)
 const route = useRoute()
 
@@ -20,13 +21,20 @@ let prevScrollY = window.scrollY
 
 function showNavTab() {
   let currentScrollY = window.scrollY
-  if (route.path === '/') {
     shown.value = currentScrollY > prevScrollY
     prevScrollY = currentScrollY
+
+  // if the route path is not on the homepage, the navtab will position: not fixed and stay visible
+  if (route.path !== '/') {
+    shown.value = true
+    document.querySelector('.navTab').style.position = 'relative'
+  }
+  else {
+    document.querySelector('.navTab').style.position = 'fixed'
   }
 }
 
-onMounted(() => {
+onMounted(() => {  
   window.addEventListener('scroll', showNavTab)
 })
 </script>
@@ -39,38 +47,45 @@ body {
 
 .hide {
   opacity: 0;
-  animation: pop-out 1s;
-  transition: all 1s;
+  animation: pop-out 0.5s;
 }
 
 .visible {
   opacity: 1;
-  animation: pop-in 1s;
+  animation: pop-in 0.5s;
 }
 
 .navTab {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 2;
+  width: 98vw;
+}
+
+.routerView {
+  width: 98vw;
 }
 
 @keyframes pop-in {
   from {
     transform: translatey(-100%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes pop-out {
   from {
     transform: translateX(0);
+    opacity: 1;
   }
   to {
     transform: translatey(-100%);
+    opacity: 0;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <button @click="url">{{ text }}</button>
+  <button @click="getUrl">{{ text }}</button>
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
     }
   },
   methods: {
-    url() {
+    getUrl() {
       window.location.href = this.url
     }
   }
