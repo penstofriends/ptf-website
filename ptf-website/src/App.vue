@@ -52,7 +52,7 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
-  width: 98vw;
+  width: 100%;
 }
 
 .hide {
@@ -65,8 +65,13 @@ body {
   animation: pop-in 0.5s;
 }
 
+
 .routerView {
-  width: 98vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  overflow: hidden;
 }
 
 @keyframes pop-in {

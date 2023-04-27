@@ -22,7 +22,6 @@ import OurStory from '../components/OurStory.vue'
 
 .container__bottom-bar {
   background-color: #ddd7d4;
-  width: 98vw;
   height: 50px;
 }
 </style>

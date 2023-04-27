@@ -21,7 +21,6 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
   text-align: center;
   background-color: white;
   padding: 1rem 0rem 1rem 0rem;
@@ -34,7 +33,6 @@ nav a {
   justify-content: center;
   padding: 0 1rem;
   margin: 0.5rem;
-  width: fit-content;
   white-space: nowrap;
   text-decoration: none;
 }
