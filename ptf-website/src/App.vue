@@ -1,47 +1,52 @@
 <template>
-  <div :style="{ display: displayed ? 'grid' : 'none' }" v-show="showComponent" class="navTab">
+  <div :class="{ navTab: true, visible: shown, hide: !shown }">
     <NavTab />
   </div>
 
   <div class="routerView">
     <router-view />
   </div>
-
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import NavTab from './components/NavTab.vue'
 
 const shown = ref(false)
-const displayed = ref(false)
 const route = useRoute()
 
-function showNavTab() {
-  shown.value = (route.path === '/') ? (window.scrollY > 100) : true
+let prevScrollY = window.scrollY
 
-  if (shown.value) {
-    displayed.value = true
+function showNavTab() {
+  let currentScrollY = window.scrollY
+  if (route.path === '/') {
+    shown.value = currentScrollY > prevScrollY
+    prevScrollY = currentScrollY
   }
 }
 
 onMounted(() => {
   window.addEventListener('scroll', showNavTab)
-  
 })
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', showNavTab)
-})
-
 </script>
 
 <style>
 body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  opacity: 0;
+  animation: pop-out 1s;
+  transition: all 1s;
+}
+
+.visible {
+  opacity: 1;
+  animation: pop-in 1s;
+}
 
 .navTab {
   position: fixed;
@@ -49,17 +54,23 @@ body {
   left: 0;
   width: 100%;
   z-index: 2;
-
-  animation: slide-in 1s;
 }
 
-@keyframes slide-in {
+@keyframes pop-in {
   from {
-    transform: translateX(-100%);
+    transform: translatey(-100%);
   }
   to {
     transform: translateX(0);
   }
 }
 
+@keyframes pop-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translatey(-100%);
+  }
+}
 </style>

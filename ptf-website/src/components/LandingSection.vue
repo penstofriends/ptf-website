@@ -9,7 +9,7 @@
     </div>
 
     <div class="text__landingSection-content">
-      <h3>i also didn't develop this part yet</h3>
+      <h3>still developing this part</h3>
     </div>
   </div>
 </template>
@@ -29,6 +29,8 @@
   background: linear-gradient(90deg, #a4baf5, #779670, #c2c1b7);
   background-size: 300% 300%;
   animation: gradient 4s alternate infinite;
+
+  box-shadow: 32px 32px 64px #b8b8b8, -32px -32px 64px #ffffff;
 }
 @keyframes gradient {
   0% {

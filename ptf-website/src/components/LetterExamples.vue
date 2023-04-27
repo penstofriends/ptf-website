@@ -1,10 +1,10 @@
 <template>
   <div class="letterExamples">
     <div class="pictures">
-      <img src="/letterPic01.jpg" />
-      <img src="/letterPic02.jpg" />
-      <img src="/letterPic03.jpg" />
-      <img src="/letterPic04.jpg" />
+      <img src="/letterPic01.jpg" class="hidden" />
+      <img src="/letterPic02.jpg" class="hidden" />
+      <img src="/letterPic03.jpg" class="hidden" />
+      <img src="/letterPic04.jpg" class="hidden" />
     </div>
   </div>
 </template>
@@ -26,4 +26,54 @@ img {
 .letterExamples {
   margin-bottom: 5vh;
 }
+
+/* hidden images will be invisible until intersected by the observer, and then will be visible with a transition of coming from the left staggered */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* staggered transition */
+.visible:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.visible:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.visible:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.visible:nth-child(4) {
+  transition-delay: 0.7s;
+}
 </style>
+
+<script>
+export default {
+  mounted() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+        }
+      })
+    })
+
+    const hiddenElements = document.querySelectorAll('.hidden')
+    hiddenElements.forEach((element) => {
+      observer.observe(element)
+    })
+  }
+}
+</script>
