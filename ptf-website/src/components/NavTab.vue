@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="{ slideIn: displayed }">
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/GettingInvolved">Get Involved</router-link>
@@ -9,7 +9,23 @@
   </div>
 </template>
 
+<script setup>
+
+</script>
+
 <style scoped>
+
+.slideIn {
+  animation: slideIn 0.2s;
+}
+
+@keyframes slideIn {
+  0%,
+  100% {
+    transform: translateY(54px);
+  }
+}
+
 body {
   margin: 0;
 }
@@ -56,7 +72,7 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a:hover {
-opacity: 60%;
+  opacity: 60%;
   transition: all 1s ease;
 }
 </style>

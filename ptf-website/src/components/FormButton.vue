@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "FormButton",
+  name: 'FormButton',
   props: {
     text: {
       type: String,
@@ -17,13 +17,12 @@ export default {
   },
   methods: {
     url() {
-      window.location.href = this.url;
+      window.location.href = this.url
     }
   }
 }
 </script>
 
-  
 <style scoped>
 button {
   display: inline-block;

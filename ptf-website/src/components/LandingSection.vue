@@ -1,6 +1,5 @@
 <template>
   <div class="container__landingSection">
-
     <div class="text__landingSection-header">
       <h1>Pens to Friends</h1>
     </div>
@@ -8,13 +7,14 @@
     <div class="text__landingSection-subheader">
       <h2>Spreading smiles, one letter at a time</h2>
     </div>
-    
+
     <div class="text__landingSection-content">
       <h3>i also didn't develop this part yet</h3>
     </div>
-
   </div>
 </template>
+
+<script setup></script>
 
 <style scoped>
 .container__landingSection {
@@ -23,16 +23,13 @@
   align-items: center;
   justify-content: center;
 
-  padding: 10vh 0;
-  margin-top: 2vh;
-  width: 80vw;
+  width: 99vw;
+  height: 100vh;
 
-  border-radius: 55px;
-  background: linear-gradient(145deg, #779670, #647e5f);
-  box-shadow:  22px 22px 44px #aaa5a2,
-              -22px -22px 44px #ffffff;
+  background: linear-gradient(90deg, #a4baf5, #779670, #c2c1b7);
+  background-size: 300% 300%;
+  animation: gradient 4s alternate infinite;
 }
-
 @keyframes gradient {
   0% {
     background-position: 0%;
