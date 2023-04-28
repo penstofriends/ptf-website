@@ -1,6 +1,6 @@
 <template>
   <div class="container__ourStory">
-    <div class="text__outStory-subheader">
+    <div class="text__ourStory-subheader">
       <h2>OUR STORY</h2>
     </div>
 
@@ -30,6 +30,7 @@
 .container__ourStory {
   display: grid;
   justify-items: center;
+  justify-content: center;
 
   border-radius: 55px;
   background: #e0e0e0;
@@ -41,22 +42,30 @@
   margin: 5rem 0;
 }
 
+
+.text__ourStory-subheader {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  text-align: center;
+
+  width: 30%;
+
+  border-radius: 55px;
+  background: #cac9c9;
+}
+
 .container__ourStory-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  max-width: 75%;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
 }
 
-.text__outStory-subheader {
-  text-align: center;
-
-  width: 20%;
-
-  border-radius: 55px;
-  background: #cac9c9;
-}
 
 .text__ourStory {
   margin-right: 2.5rem;
@@ -71,5 +80,19 @@
   justify-content: center;
   align-items: center;
   margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .text__ourStory-subheader {
+    width: 45vw;
+  }
+
+  .text__ourStory {
+    margin-right: 0;
+    width: 100vw;
+  }
+  .container__ourStory-content {
+    flex-direction: column;
+  }
 }
 </style>
