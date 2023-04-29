@@ -2,6 +2,9 @@
   <div :class="{ navTab: true, visible: shown, hide: !shown }">
     <NavTab />
   </div>
+  <div :class="{ navMenu: true }">
+    <NavMenu />
+  </div>
 
   <div class="routerView">
     <router-view />
@@ -12,6 +15,7 @@
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import NavTab from './components/NavTab.vue'
+import NavMenu from './components/NavMenu.vue'
 
 
 const shown = ref(false)
@@ -68,6 +72,7 @@ body {
 
 .routerView {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: auto;

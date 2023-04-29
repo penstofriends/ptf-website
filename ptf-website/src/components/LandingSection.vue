@@ -23,7 +23,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
 
   background: linear-gradient(90deg, #a4baf5, #779670, #c2c1b7);
@@ -41,16 +41,39 @@
   }
 }
 
+
 .text__landingSection-header {
   font-size: 50px;
   font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.02rem;
+  text-align: center;
 }
 
 .text__landingSection-subheader {
   font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  text-align: center;
 }
 
 .text__landingSection-content {
   font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 50rem;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .text__landingSection-header {
+    font-size: 30px;
+  }
+  .text__landingSection-subheader {
+    font-size: 20px;
+  }
+  .text__landingSection-content {
+    font-size: 14px;
+  }
+}
+
 </style>

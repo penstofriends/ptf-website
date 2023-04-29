@@ -57,6 +57,12 @@ img {
 .image__visible:nth-child(4) {
   transition-delay: 0.7s;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .pictures {
+    flex-direction: column;
+  }
+}
 </style>
 
 <script>
