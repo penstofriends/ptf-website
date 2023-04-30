@@ -15,23 +15,23 @@ export default {
   props: {
     question: {
       type: String,
-      required: true,
+      required: true
     },
     answer: {
       type: String,
-      required: true,
+      required: true
     },
     isVisible: {
       type: Boolean,
-      required: true,
-    },
+      required: true
+    }
   },
   methods: {
     toggleAnswer() {
-      this.$emit('toggle');
-    },
-  },
-};
+      this.$emit('toggle')
+    }
+  }
+}
 </script>
 
 <style>

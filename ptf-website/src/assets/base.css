@@ -1,10 +1,12 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
---turfGreen:  #6f8c69;
---celadonGreen: #88A18B;
---green: #C8C8A9;
---brown: #423025;
---ivory: #F6EFEB;
+  --turfGreen: #6f8c69;
+  --celadonGreen: #88a18b;
+  --mossGreen: #9ea48b;
+  --forestGreen: #65633a;
+  --green: #c8c8a9;
+  --brown: #423025;
+  --ivory: #f6efeb;
 }
 
 /* semantic color variables for this project */
@@ -22,16 +24,12 @@
   --section-gap: 160px;
 }
 
-
 body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
-  line-height: 1.6;
-  font-size: 16px;
   overflow: auto;
-  font-family: 'Noto Sans', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

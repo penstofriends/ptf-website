@@ -1,10 +1,10 @@
 <template>
-  <button @click="url">{{ text }}</button>
+  <button @click="getUrl">{{ text }}</button>
 </template>
 
 <script>
 export default {
-  name: "FormButton",
+  name: 'FormButton',
   props: {
     text: {
       type: String,
@@ -16,14 +16,13 @@ export default {
     }
   },
   methods: {
-    url() {
-      window.location.href = this.url;
+    getUrl() {
+      window.location.href = this.url
     }
   }
 }
 </script>
 
-  
 <style scoped>
 button {
   display: inline-block;
