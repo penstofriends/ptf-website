@@ -62,6 +62,22 @@ img {
   .pictures {
     flex-direction: column;
   }
+
+  .image__visible:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.image__visible:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.image__visible:nth-child(3) {
+  transition-delay: 0.1s;
+}
+
+.image__visible:nth-child(4) {
+  transition-delay: 0.1s;
+}
 }
 </style>
 

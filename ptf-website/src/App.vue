@@ -17,7 +17,6 @@ import { useRoute } from 'vue-router'
 import NavTab from './components/NavTab.vue'
 import NavMenu from './components/NavMenu.vue'
 
-
 const shown = ref(false)
 const route = useRoute()
 
@@ -25,20 +24,19 @@ let prevScrollY = window.scrollY
 
 function showNavTab() {
   let currentScrollY = window.scrollY
-    shown.value = currentScrollY > prevScrollY
-    prevScrollY = currentScrollY
+  shown.value = currentScrollY > prevScrollY
+  prevScrollY = currentScrollY
 
   // if the route path is not on the homepage, the navtab will position: not fixed and stay visible
   if (route.path !== '/') {
     shown.value = true
     document.querySelector('.navTab').style.position = 'relative'
-  }
-  else {
+  } else {
     document.querySelector('.navTab').style.position = 'fixed'
   }
 }
 
-onMounted(() => {  
+onMounted(() => {
   document.querySelector('.navTab').classList.remove('hide')
   window.addEventListener('scroll', showNavTab)
 })
@@ -68,7 +66,6 @@ body {
   opacity: 1;
   animation: pop-in 0.5s;
 }
-
 
 .routerView {
   display: flex;

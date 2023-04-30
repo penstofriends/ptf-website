@@ -5,7 +5,6 @@
     <router-link to="/FrequentQuestions" draggable="false">FAQs</router-link>
     <router-link to="/ContactUs" draggable="false">Contact Us</router-link>
   </nav>
-
 </template>
 
 <style scoped>
@@ -45,7 +44,6 @@
   opacity: 60%;
   transition: all 0.5s cubic-bezier(0.19, 0.68, 0.8, 0.41);
 }
-
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .container__navTab {

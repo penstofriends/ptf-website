@@ -21,27 +21,23 @@
 <script>
 export default {
   mounted() {
-    const checkbox = document.getElementById('burger');
-    const navMenu = document.querySelector('.container__navMenu');
+    const checkbox = document.getElementById('burger')
+    const navMenu = document.querySelector('.container__navMenu')
 
     checkbox.addEventListener('click', () => {
       if (checkbox.checked) {
-        navMenu.classList.add('container__navMenu-active');
+        navMenu.classList.add('container__navMenu-active')
       } else {
-        navMenu.classList.remove('container__navMenu-active');
+        navMenu.classList.remove('container__navMenu-active')
       }
-    });
+    })
   }
 }
 </script>
 
-
-
 <style>
 .container__menu {
-    
-  font-family: 'Noto Sans', sans-serif;
-  letter-spacing: 0.1rem;
+  font-family: 'Montserrat', sans-serif;
 
   width: fit-content;
   display: flex;
@@ -49,8 +45,7 @@ export default {
   z-index: 2;
   flex-direction: column;
 
-  background-color: white;
-  padding: 1rem;
+  padding: 1rem 0;
   opacity: 1;
 }
 
@@ -61,18 +56,25 @@ export default {
   margin-top: 20px;
   flex-direction: column;
   justify-content: space-around;
+  
+
+  background-color: var(--celadonGreen);
 }
 
 .container__navMenu a {
-  padding: 0;
+  padding: 0 1rem;
   font-size: 1.6rem;
-  color: #646c64;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .container__navMenu-active {
-    opacity: 1;
-    display: flex;
+  opacity: 1;
+  display: flex;
+}
+
+.container__menu-icon {
+  padding-left: 1rem;
 }
 
 .burger {
@@ -82,8 +84,6 @@ export default {
   background: transparent;
   cursor: pointer;
   display: block;
-
-  background-color: white;
 }
 
 .burger input {
@@ -137,10 +137,9 @@ export default {
   left: 5px;
 }
 
-
 @media only screen and (min-width: 481px) {
-    .container__menu {
-        display: none;
-    }
+  .container__menu {
+    display: none;
+  }
 }
 </style>

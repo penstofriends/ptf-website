@@ -12,9 +12,13 @@
       <h3>still developing this part</h3>
     </div>
   </div>
+  
+  <ScrollArrow />
 </template>
 
-<script setup></script>
+<script setup>
+import ScrollArrow from '../components/ScrollArrow.vue';
+</script>
 
 <style scoped>
 .container__landingSection {
@@ -26,9 +30,7 @@
   width: 100vw;
   height: 100vh;
 
-  background: linear-gradient(90deg, #a4baf5, #779670, #c2c1b7);
-  background-size: 300% 300%;
-  animation: gradient 4s alternate infinite;
+  background: linear-gradient(135deg, #92A48B, var(--mossGreen));
 
   box-shadow: 16px 16px 32px #b8b8b8;
 }
@@ -40,7 +42,6 @@
     background-position: 100%;
   }
 }
-
 
 .text__landingSection-header {
   font-size: 50px;
@@ -75,5 +76,4 @@
     font-size: 14px;
   }
 }
-
 </style>
