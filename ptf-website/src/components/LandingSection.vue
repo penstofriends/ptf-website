@@ -1,5 +1,6 @@
 <template>
-  <div class="container__landingSection">
+  <section id="section__landingSection">
+    <div class="container__landingSection">
     <div class="text__landingSection-header">
       <h1>Pens to Friends</h1>
     </div>
@@ -11,9 +12,13 @@
     <div class="text__landingSection-content">
       <h3>still developing this part</h3>
     </div>
+    <ScrollArrow />
   </div>
   
-  <ScrollArrow />
+  
+  </section>
+  
+  
 </template>
 
 <script setup>
@@ -21,6 +26,7 @@ import ScrollArrow from '../components/ScrollArrow.vue';
 </script>
 
 <style scoped>
+
 .container__landingSection {
   display: flex;
   flex-direction: column;

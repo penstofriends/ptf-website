@@ -1,6 +1,6 @@
 <template>
   <section id="section__ourStory">
-    <div class="container__ourStory" id="ourStory">
+    <div class="container__ourStory">
       <div class="text__ourStory-subheader">
         <h2>OUR STORY</h2>
       </div>
@@ -34,7 +34,6 @@
   justify-items: center;
   justify-content: center;
 
-  border-radius: 55px;
   background: #e0e0e0;
   box-shadow: 22px 22px 44px #aaa5a2, -22px -22px 44px #ffffff;
 

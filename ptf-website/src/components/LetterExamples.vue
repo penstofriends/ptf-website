@@ -1,12 +1,15 @@
 <template>
-  <div class="letterExamples">
-    <div class="pictures">
+  <section id="section__letterExamples">
+    <div class="container__letterExamples">
+    <div class="container__letterExamples-pictures">
       <img src="/letterPic01.jpg" class="image__hidden" />
       <img src="/letterPic02.jpg" class="image__hidden" />
       <img src="/letterPic03.jpg" class="image__hidden" />
       <img src="/letterPic04.jpg" class="image__hidden" />
     </div>
   </div>
+  </section>
+  
 </template>
 
 <style scoped>
@@ -15,7 +18,7 @@ img {
   margin: 1.2rem;
 }
 
-.pictures {
+.container__letterExamples-pictures {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -23,7 +26,7 @@ img {
   background-color: var(--green);
 }
 
-.letterExamples {
+.container__letterExamples {
   margin-bottom: 5vh;
 }
 
@@ -59,7 +62,7 @@ img {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  .pictures {
+  .container__letterExamples-pictures {
     flex-direction: column;
   }
 

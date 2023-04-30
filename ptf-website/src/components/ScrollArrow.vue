@@ -1,6 +1,9 @@
 <template>
-  <section id="section05" class="demo">
-    <a href="#section__ourStory"><span></span>Scroll</a>
+  <section id="section__scrollArrow">
+    <div class="container__scrollArrow">
+      
+     <a href="#section__ourStory" draggable="false"><span></span></a>
+    </div>
   </section>
 </template>
 
@@ -9,47 +12,34 @@ export default {}
 </script>
 
 <style scoped>
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 
-section {
-  width: 100%;
-  height: 100%;
-}
-.demo a {
+.container__scrollArrow a {
   position: absolute;
-  bottom: 20px;
-  left: 48%;
+  bottom: 10%;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transform: translateX(-50%);
+  margin: auto;
   z-index: 2;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: #fff;
-  font: normal 400 20px/1 'Josefin Sans', sans-serif;
-  text-decoration: none;
-  transition: opacity 0.3s;
+
+  background-color: #696b68;
+  opacity: .6;
 }
-.demo a:hover {
+.container__scrollArrow a:hover {
   opacity: 0.5;
 }
-
-#section05 a {
-  padding-top: 70px;
-}
-#section05 a span {
-  position: absolute;
-  top: 0;
-  left: 50%;
+#section__scrollArrow a span {
+  display: block;
   width: 24px;
   height: 24px;
-  margin-left: -12px;
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation: sdb05 1.5s infinite;
-  animation: sdb05 1.5s infinite;
+  -webkit-animation: scrolling 1.5s infinite;
+  animation: scrolling 1.5s infinite;
   box-sizing: border-box;
 }
-@-webkit-keyframes sdb05 {
+@-webkit-keyframes scrolling {
   0% {
     -webkit-transform: rotate(-45deg) translate(0, 0);
     opacity: 0;
@@ -62,7 +52,7 @@ section {
     opacity: 0;
   }
 }
-@keyframes sdb05 {
+@keyframes scrolling {
   0% {
     transform: rotate(-45deg) translate(0, 0);
     opacity: 0;
