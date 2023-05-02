@@ -1,6 +1,6 @@
 <template>
   <section id="section__scrollArrow">
-    <div class="container__scrollArrow">
+    <div class="container__scrollArrow hideArrow">
       
      <a href="#section__ourStory" draggable="false"><span></span></a>
     </div>
@@ -8,27 +8,34 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    setTimeout(() => {
+      const scrollArrow = document.querySelector('.container__scrollArrow')
+      scrollArrow.classList.add('showArrow')
+      scrollArrow.classList.remove('hideArrow')
+    }, 2000)
+  },
+}
 </script>
 
 <style scoped>
 
 .container__scrollArrow a {
   position: absolute;
-  bottom: 10%;
-  padding-bottom: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  bottom:  0%;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   transform: translateX(-50%);
   margin: auto;
-  z-index: 2;
 
-  background-color: #696b68;
+  background-color: #708068;
   opacity: .6;
+
+  z-index: 1;
 }
-.container__scrollArrow a:hover {
-  opacity: 0.5;
-}
+
 #section__scrollArrow a span {
   display: block;
   width: 24px;
@@ -63,6 +70,24 @@ export default {}
   100% {
     transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
+  }
+}
+
+.hideArrow a {
+  opacity: 0;
+}
+
+.showArrow a {
+  opacity: 1;
+  animation: slide-in 1s;
+}
+
+@keyframes slide-in {
+  0% {
+    bottom: -100px
+  }
+  100% {
+    bottom: 0px
   }
 }
 </style>

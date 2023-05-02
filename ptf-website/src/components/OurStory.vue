@@ -29,6 +29,10 @@
 </template>
 
 <style scoped>
+#section__ourStory {
+  background-color: var(--ivory);
+  z-index: 1;
+}
 .container__ourStory {
   display: grid;
   justify-items: center;
@@ -51,9 +55,6 @@
   text-align: center;
 
   width: 30%;
-
-  border-radius: 55px;
-  background: #cac9c9;
 }
 
 .container__ourStory-content {

@@ -1,6 +1,7 @@
 <template>
   <div class="container__components-home">
     <LandingSection />
+    <ScrollArrow />
     <OurStory />
     <LetterExamples />
   </div>
@@ -11,6 +12,7 @@
 import LandingSection from '../components/LandingSection.vue'
 import LetterExamples from '../components/LetterExamples.vue'
 import OurStory from '../components/OurStory.vue'
+import ScrollArrow from '../components/ScrollArrow.vue';
 </script>
 
 <style>

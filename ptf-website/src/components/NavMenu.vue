@@ -42,7 +42,7 @@ export default {
   width: fit-content;
   display: flex;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   flex-direction: column;
 
   padding: 1rem 0;
