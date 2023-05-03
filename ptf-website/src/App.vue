@@ -1,8 +1,8 @@
 <template>
-  <div :class="{ navTab: true, visible: shown, hide: !shown }">
+  <div :class="{ container_navTab: true, navTab_visible: shown, navTab_hide: !shown, temp_navTab_hide: true }">
     <NavTab />
   </div>
-  <div :class="{ navMenu: true }">
+  <div class="container_navMenu">
     <NavMenu />
   </div>
 
@@ -30,14 +30,12 @@ function showNavTab() {
   // if the route path is not on the homepage, the navtab will position: not fixed and stay visible
   if (route.path !== '/') {
     shown.value = true
-    document.querySelector('.navTab').style.position = 'relative'
-  } else {
-    document.querySelector('.navTab').style.position = 'fixed'
   }
-}
+  document.querySelector('.container_navTab').classList.remove('temp_navTab_hide')
+  }
+
 
 onMounted(() => {
-  document.querySelector('.navTab').classList.remove('hide')
   window.addEventListener('scroll', showNavTab)
 })
 </script>
@@ -48,8 +46,7 @@ body {
   padding: 0;
 }
 
-.navTab {
-  opacity: 0;
+.container_navTab {
   position: fixed;
   top: 0;
   left: 0;
@@ -57,14 +54,18 @@ body {
   width: 100%;
 }
 
-.hide {
+.navTab_hide {
   opacity: 0;
   animation: pop-out 0.5s;
 }
 
-.visible {
+.navTab_visible {
   opacity: 1;
   animation: pop-in 0.5s;
+}
+
+.temp_navTab_hide {
+  opacity: 0;
 }
 
 .routerView {

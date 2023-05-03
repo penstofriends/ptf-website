@@ -14,7 +14,7 @@ export default {
       const scrollArrow = document.querySelector('.container__scrollArrow')
       scrollArrow.classList.add('showArrow')
       scrollArrow.classList.remove('hideArrow')
-    }, 2000)
+    }, 1500)
   },
 }
 </script>
