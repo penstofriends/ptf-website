@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ container_navTab: true, navTab_visible: shown, navTab_hide: !shown, temp_navTab_hide: true }">
+  <div :class="{ container_navTab: true, navTab_visible: shown, navTab_hide: !shown}">
     <NavTab />
   </div>
   <div class="container_navMenu">
@@ -23,6 +23,8 @@ const route = useRoute()
 let prevScrollY = window.scrollY
 
 function showNavTab() {
+  const navTab = document.querySelector('.container_navTab')
+
   let currentScrollY = window.scrollY
   shown.value = currentScrollY > prevScrollY
   prevScrollY = currentScrollY
@@ -31,7 +33,11 @@ function showNavTab() {
   if (route.path !== '/') {
     shown.value = true
   }
-  document.querySelector('.container_navTab').classList.remove('temp_navTab_hide')
+  navTab.classList.remove('temp_navTab_hide')
+
+  if (navTab.classList.contains('navTab_popOutAnimation') == false) {
+    navTab.classList.add('navTab_popOutAnimation')
+  }
   }
 
 
@@ -56,6 +62,9 @@ body {
 
 .navTab_hide {
   opacity: 0;
+}
+
+.navTab_popOutAnimation {
   animation: pop-out 0.5s;
 }
 
@@ -64,9 +73,6 @@ body {
   animation: pop-in 0.5s;
 }
 
-.temp_navTab_hide {
-  opacity: 0;
-}
 
 .routerView {
   display: flex;
