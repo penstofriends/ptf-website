@@ -11,18 +11,22 @@
       <router-view />
     </div>
   </div>
+
+  <TopArrow />
   
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import NavTab from './components/NavTab.vue'
 import NavMenu from './components/NavMenu.vue'
+import TopArrow from './components/TopArrow.vue'
 
 const shown = ref(false)
 const route = useRoute()
 
+const navTabStyle = ref({ position: 'fixed' })
 
 let prevScrollY = window.scrollY
 
@@ -36,11 +40,10 @@ function showNavTab() {
 
   if (route.path !== '/') {
     shown.value = true
-    navTab.style.position = 'relative'
+    navTabStyle.value.position = 'relative' // Set the position style to relative
   } else if (route.path == '/') {
-    navTab.style.position = 'fixed'
+    navTabStyle.value.position = 'fixed' // Set the position style to fixed
   }
-  navTab.classList.remove('temp_navTab_hide')
 
   if (navTab.classList.contains('navTab_popOutAnimation') == false) {
     navTab.classList.add('navTab_popOutAnimation')
@@ -50,8 +53,6 @@ function showNavTab() {
 
 onMounted(() => {
   window.addEventListener('scroll', showNavTab)
-
-  
 
   document.addEventListener('click', (event) => {
     
@@ -64,8 +65,6 @@ onMounted(() => {
       navMenuLinks.classList.remove('container__navMenu-links-active')
       checkbox.checked = false;
     }
-
-    console.log(event.target, clickInsideNavmenu)
 });
 })
 
@@ -101,15 +100,15 @@ body {
 
 .navTab_hide {
   opacity: 0;
-}
+} 
 
 .navTab_popOutAnimation {
-  animation: pop-out 0.5s;
+  animation: pop-out 1s;
 }
 
 .navTab_visible {
   opacity: 1;
-  animation: pop-in 0.5s;
+  animation: pop-in 1s;
 }
 
 
@@ -126,22 +125,22 @@ body {
 
 @keyframes pop-in {
   from {
-    transform: translatey(-100%);
+    transform: translateY(-100px);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes pop-out {
   from {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
   to {
-    transform: translatey(-100%);
+    transform: translateY(-100px);
     opacity: 0;
   }
 }

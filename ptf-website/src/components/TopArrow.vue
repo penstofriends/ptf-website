@@ -42,6 +42,9 @@ export default {
           topArrow.classList.add('pop-out')
           topArrow.classList.remove('pop-in')
         }
+      } else {
+        topArrow.classList.remove('show-topArrow')
+        topArrow.classList.add('none-topArrow')
       }
 
     }
@@ -109,7 +112,7 @@ export default {
 @keyframes pop-in {
   from {
     opacity: 0;
-    transform: translatey(150%);
+    transform: translatey(150px);
   }
 
   to {
@@ -126,6 +129,6 @@ export default {
 
   to {
     opacity: 0;
-    transform: translatey(150%);
+    transform: translatey(150px);
   }
 }</style>
