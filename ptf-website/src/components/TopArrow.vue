@@ -7,6 +7,7 @@
 </template>
 
 <script>
+
 import { useRoute } from 'vue-router'
 
 
@@ -23,7 +24,6 @@ export default {
   methods: {
     ifScrolledEnough: function () {
       const topArrow = document.querySelector('.container__topArrow')
-
       if (this.route.path == '/') {
         if (window.scrollY > 500) {
           this.showTopArrow = true
@@ -46,7 +46,6 @@ export default {
         topArrow.classList.remove('show-topArrow')
         topArrow.classList.add('none-topArrow')
       }
-
     }
   },
   mounted() {
@@ -127,8 +126,10 @@ export default {
     transform: translatey(0);
   }
 
+
   to {
     opacity: 0;
     transform: translatey(150px);
   }
 }</style>
+

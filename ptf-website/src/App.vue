@@ -1,4 +1,5 @@
 <template>
+
   <div class="container__app">
     <div :class="{ container__navTab: true, navTab_visible: shown, navTab_hide: !shown }">
       <NavTab />
@@ -10,6 +11,7 @@
     <div class="routerView">
       <router-view />
     </div>
+
   </div>
 
   <TopArrow />
@@ -46,6 +48,7 @@ function showNavTab() {
   if (navTab.classList.contains('navTab_popOutAnimation') == false) {
     navTab.classList.add('navTab_popOutAnimation')
   }
+
   console.log(navTab.style.position)
   }
 
@@ -70,7 +73,9 @@ onMounted(() => {
 watch(
   () => route.path,
   () => {
+
     showNavTab()
+
     if (route.path !== '/') {
       shown.value = true
     } else {
@@ -109,7 +114,6 @@ body {
   opacity: 1;
   animation: pop-in 1s;
 }
-
 
 .routerView {
   display: flex;
