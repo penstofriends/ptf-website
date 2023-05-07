@@ -9,7 +9,7 @@
       </label>
     </div>
 
-    <div class="container__navMenu">
+    <div class="container__navMenu-links">
       <router-link to="/" draggable="false">Home</router-link>
       <router-link to="/GettingInvolved" draggable="false">Get Involved</router-link>
       <router-link to="/FrequentQuestions" draggable="false">FAQs</router-link>
@@ -22,13 +22,13 @@
 export default {
   mounted() {
     const checkbox = document.getElementById('burger')
-    const navMenu = document.querySelector('.container__navMenu')
+    const navMenu = document.querySelector('.container__navMenu-links')
 
     checkbox.addEventListener('click', () => {
       if (checkbox.checked) {
-        navMenu.classList.add('container__navMenu-active')
+        navMenu.classList.add('container__navMenu-links-active')
       } else {
-        navMenu.classList.remove('container__navMenu-active')
+        navMenu.classList.remove('container__navMenu-links-active')
       }
     })
   }
@@ -39,7 +39,7 @@ export default {
 .container__menu {
   font-family: 'Montserrat', sans-serif;
 
-  width: fit-content;
+  width: 100vw;
   display: flex;
   position: fixed;
   z-index: 3;
@@ -49,26 +49,30 @@ export default {
   opacity: 1;
 }
 
-.container__navMenu {
+.container__navMenu-links {
   display: none;
   height: 25vh;
-  width: 100vw;
+  width: 80vw;
+
   margin-top: 20px;
+  margin-left: 10px;
+
   flex-direction: column;
   justify-content: space-around;
   
+  border: 4px solid black;
 
-  background-color: var(--celadonGreen);
+  background-color: #bcd1be;
 }
 
-.container__navMenu a {
+.container__navMenu-links a {
   padding: 0 1rem;
   font-size: 1.6rem;
-  color: #ffffff;
+  color: black;
   text-decoration: none;
 }
 
-.container__navMenu-active {
+.container__navMenu-links-active {
   opacity: 1;
   display: flex;
 }
