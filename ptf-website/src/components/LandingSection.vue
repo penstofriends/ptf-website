@@ -1,32 +1,34 @@
 <template>
   <section id="section__landingSection">
     <div class="container__landingSection">
-    <div class="text__landingSection-header">
-      <h1>Pens to Friends</h1>
-    </div>
+      <div class="text__landingSection-header">
+        <h1>Pens to Friends</h1>
+      </div>
 
-    <div class="text__landingSection-subheader">
-      <h2>Spreading smiles, one letter at a time</h2>
-    </div>
+      <div class="text__landingSection-subheader">
+        <h2>Spreading smiles, one letter at a time</h2>
+      </div>
 
-    <div class="text__landingSection-content">
-      <h3>still developing this part</h3>
+      <div class="text__landingSection-content">
+        <h3>still developing this part</h3>
+      </div>
+
+        
     </div>
-    <ScrollArrow />
-  </div>
-  
-  
   </section>
-  
-  
 </template>
 
-<script setup>
-import ScrollArrow from '../components/ScrollArrow.vue';
+<script>
+import ScrollArrow from '../components/ScrollArrow.vue'
+
+export default {
+  components: {
+    ScrollArrow
+  }
+}
 </script>
 
 <style scoped>
-
 .container__landingSection {
   display: flex;
   flex-direction: column;
@@ -36,17 +38,7 @@ import ScrollArrow from '../components/ScrollArrow.vue';
   width: 100vw;
   height: 100vh;
 
-  background: linear-gradient(135deg, #92A48B, var(--mossGreen));
-
-  box-shadow: 16px 16px 32px #b8b8b8;
-}
-@keyframes gradient {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
+  background: linear-gradient(135deg, #92a48b, var(--mossGreen));
 }
 
 .text__landingSection-header {

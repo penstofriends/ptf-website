@@ -18,6 +18,8 @@
   text-align: center;
   background-color: white;
   padding: 1rem 0rem 1rem 0rem;
+
+  z-index: 3;
 }
 
 .container__navTab a {

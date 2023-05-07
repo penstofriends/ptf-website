@@ -50,17 +50,40 @@ export default {
 h1 {
   margin-top: 6rem;
   text-align: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
 }
 
 h2 {
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
 }
 
 h3 {
   font-size: 1rem;
   max-width: 28rem;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  text-align: center;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  max-width: 50rem;
+  text-indent: 3rem;
+  margin-bottom: 2rem;
 }
 
 .container {

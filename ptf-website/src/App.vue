@@ -1,8 +1,8 @@
 <template>
-  <div :class="{ navTab: true, visible: shown, hide: !shown }">
+  <div :class="{ container_navTab: true, navTab_visible: shown, navTab_hide: !shown }">
     <NavTab />
   </div>
-  <div :class="{ navMenu: true }">
+  <div class="container_navMenu">
     <NavMenu />
   </div>
 
@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import NavTab from './components/NavTab.vue'
 import NavMenu from './components/NavMenu.vue'
@@ -23,6 +23,8 @@ const route = useRoute()
 let prevScrollY = window.scrollY
 
 function showNavTab() {
+  const navTab = document.querySelector('.container_navTab')
+
   let currentScrollY = window.scrollY
   shown.value = currentScrollY > prevScrollY
   prevScrollY = currentScrollY
@@ -30,16 +32,28 @@ function showNavTab() {
   // if the route path is not on the homepage, the navtab will position: not fixed and stay visible
   if (route.path !== '/') {
     shown.value = true
-    document.querySelector('.navTab').style.position = 'relative'
-  } else {
-    document.querySelector('.navTab').style.position = 'fixed'
+  }
+
+  if (navTab.classList.contains('navTab_popOutAnimation') == false) {
+    navTab.classList.add('navTab_popOutAnimation')
   }
 }
 
 onMounted(() => {
-  document.querySelector('.navTab').classList.remove('hide')
   window.addEventListener('scroll', showNavTab)
 })
+
+watch(
+  () => route.path,
+  () => {
+    const navTab = document.querySelector('.container_navTab')
+    if (route.path !== '/') {
+      shown.value = true
+    } else {
+      shown.value = false
+    }
+  }
+)
 </script>
 
 <style>
@@ -48,8 +62,7 @@ body {
   padding: 0;
 }
 
-.navTab {
-  opacity: 0;
+.container_navTab {
   position: fixed;
   top: 0;
   left: 0;
@@ -57,12 +70,15 @@ body {
   width: 100%;
 }
 
-.hide {
+.navTab_hide {
   opacity: 0;
+}
+
+.navTab_popOutAnimation {
   animation: pop-out 0.5s;
 }
 
-.visible {
+.navTab_visible {
   opacity: 1;
   animation: pop-in 0.5s;
 }

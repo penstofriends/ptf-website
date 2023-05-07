@@ -17,11 +17,7 @@
           goal is to band the world together.
         </p>
       </div>
-      <img
-        class="image__ourStory"
-        src="/letterPic02.jpg"
-        alt="picture of a letter resting on a plant"
-      />
+      <img class="image__ourStory" src="/letterPic02.jpg" alt="picture of a letter resting on a plant" />
     </div>
   </div>
 </template>
@@ -42,18 +38,13 @@
   margin: 5rem 0;
 }
 
-
-.text__ourStory-subheader {
+.text__ourStory-subheader h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.02rem;
   text-align: center;
-
   width: 30%;
-
-  border-radius: 55px;
-  background: #cac9c9;
 }
 
 .container__ourStory-content {
@@ -91,6 +82,7 @@
     margin-right: 0;
     width: 100vw;
   }
+
   .container__ourStory-content {
     flex-direction: column;
   }
