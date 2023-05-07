@@ -1,11 +1,13 @@
 <template>
   <div class="container__components-home">
     <LandingSection />
+    
+    
     <ScrollArrow />
     <OurStory />
     <LetterExamples />
+    <TopArrow />
   </div>
-  <div class="container__bottom-bar"></div>
 </template>
 
 <script setup>
@@ -13,6 +15,7 @@ import LandingSection from '../components/LandingSection.vue'
 import LetterExamples from '../components/LetterExamples.vue'
 import OurStory from '../components/OurStory.vue'
 import ScrollArrow from '../components/ScrollArrow.vue';
+import TopArrow from '../components/TopArrow.vue';
 </script>
 
 <style>
@@ -20,10 +23,5 @@ import ScrollArrow from '../components/ScrollArrow.vue';
   display: grid;
   justify-content: center;
   justify-items: center;
-}
-
-.container__bottom-bar {
-  background-color: #ddd7d4;
-  height: 50px;
 }
 </style>
