@@ -26,8 +26,6 @@ import TopArrow from './components/TopArrow.vue'
 const shown = ref(false)
 const route = useRoute()
 
-const navTabStyle = ref({ position: 'fixed' })
-
 let prevScrollY = window.scrollY
 
 function showNavTab() {
@@ -40,14 +38,15 @@ function showNavTab() {
 
   if (route.path !== '/') {
     shown.value = true
-    navTabStyle.value.position = 'relative' // Set the position style to relative
+    navTab.style.position = 'relative' // Set the position style to relative
   } else if (route.path == '/') {
-    navTabStyle.value.position = 'fixed' // Set the position style to fixed
+    navTab.style.position = 'fixed' // Set the position style to fixed
   }
 
   if (navTab.classList.contains('navTab_popOutAnimation') == false) {
     navTab.classList.add('navTab_popOutAnimation')
   }
+  console.log(navTab.style.position)
   }
 
 
@@ -116,7 +115,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: auto;
   overflow: hidden;
 
