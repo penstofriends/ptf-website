@@ -7,36 +7,45 @@
 </template>
 
 <script>
+
+import { useRoute } from 'vue-router'
+
+
+
 export default {
+  
   name: 'TopArrow',
   data() {
     return {
-      showTopArrow: false
+      showTopArrow: false,
+      route: useRoute(),
     }
   },
   methods: {
     ifScrolledEnough: function () {
       const topArrow = document.querySelector('.container__topArrow')
+      if (this.route.path == '/') {
+        if (window.scrollY > 500) {
+          this.showTopArrow = true
+        }
 
-      if (window.scrollY > 500) {
-        this.showTopArrow = true
-      }
+        if (window.scrollY > 300 && this.showTopArrow == true) {
+          topArrow.classList.add('show-topArrow')
+          topArrow.classList.remove('none-topArrow')
 
-      if (window.scrollY > 300 && this.showTopArrow == true) {
-        topArrow.classList.add('show-topArrow')
-        topArrow.classList.remove('none-topArrow')
+          topArrow.classList.remove('pop-out')
+          topArrow.classList.add('pop-in')
+        } else if (window.screenY < 300 && this.showTopArrow == true) {
+          topArrow.classList.remove('show-topArrow')
+          topArrow.classList.add('none-topArrow')
 
-        topArrow.classList.remove('pop-out')
-        topArrow.classList.add('pop-in')
-      } else if (window.screenY < 300 && this.showTopArrow == true) {
+          topArrow.classList.add('pop-out')
+          topArrow.classList.remove('pop-in')
+        }
+      } else {
         topArrow.classList.remove('show-topArrow')
         topArrow.classList.add('none-topArrow')
-
-        topArrow.classList.add('pop-out')
-        topArrow.classList.remove('pop-in')
       }
-
-      console.log(this.showTopArrow, window.scrollY)
     }
   },
   mounted() {
@@ -59,7 +68,10 @@ export default {
 
   border: 3px rgb(69, 69, 69) solid;
   border-radius: 20%;
+
+  z-index: 2;
 }
+
 .icon__topArrow {
   border: solid black;
   border-width: 0 5px 5px 0;
@@ -99,8 +111,9 @@ export default {
 @keyframes pop-in {
   from {
     opacity: 0;
-    transform: translatey(150%);
+    transform: translatey(150px);
   }
+
   to {
     opacity: 1;
     transform: translatey(0);
@@ -112,9 +125,11 @@ export default {
     opacity: 1;
     transform: translatey(0);
   }
+
+
   to {
     opacity: 0;
-    transform: translatey(150%);
+    transform: translatey(150px);
   }
-}
-</style>
+}</style>
+
