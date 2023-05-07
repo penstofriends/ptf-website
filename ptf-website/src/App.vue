@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ container_navTab: true, navTab_visible: shown, navTab_hide: !shown}">
+  <div :class="{ container_navTab: true, navTab_visible: shown, navTab_hide: !shown }">
     <NavTab />
   </div>
   <div class="container_navMenu">
@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import NavTab from './components/NavTab.vue'
 import NavMenu from './components/NavMenu.vue'
@@ -33,17 +33,27 @@ function showNavTab() {
   if (route.path !== '/') {
     shown.value = true
   }
-  navTab.classList.remove('temp_navTab_hide')
 
   if (navTab.classList.contains('navTab_popOutAnimation') == false) {
     navTab.classList.add('navTab_popOutAnimation')
   }
-  }
-
+}
 
 onMounted(() => {
   window.addEventListener('scroll', showNavTab)
 })
+
+watch(
+  () => route.path,
+  () => {
+    const navTab = document.querySelector('.container_navTab')
+    if (route.path !== '/') {
+      shown.value = true
+    } else {
+      shown.value = false
+    }
+  }
+)
 </script>
 
 <style>
@@ -72,7 +82,6 @@ body {
   opacity: 1;
   animation: pop-in 0.5s;
 }
-
 
 .routerView {
   display: flex;
