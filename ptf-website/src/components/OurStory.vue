@@ -63,7 +63,7 @@
   align-items: center;
   justify-content: center;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1.4rem;
 }
 
