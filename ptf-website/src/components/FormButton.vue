@@ -35,7 +35,7 @@ button {
   vertical-align: middle;
   border: none;
   color: black;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   background-color: #9cb9a0;
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   transition-property: color, background-color, border-color;
