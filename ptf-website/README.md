@@ -3,7 +3,7 @@
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Netlify Link
-https://ptf-website.netlify.app/
+https://ptf-ptf.netlify.app/
 
 ## Recommended IDE Setup
 
