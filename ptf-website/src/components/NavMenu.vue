@@ -37,8 +37,7 @@ export default {
 
 <style>
 .container__menu {
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: 'Noto Sans', sans-serif;
   width: 100vw;
   display: flex;
   position: fixed;
