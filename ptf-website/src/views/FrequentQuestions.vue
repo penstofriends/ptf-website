@@ -42,19 +42,27 @@ export default {
 
 <style scoped>
 h1 {
-  margin-top: 6rem;
+  margin-top: 2rem;
   margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
 p {
   text-indent: 0;
   text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 .faq-list {
   margin: 0 auto;
   max-width: 65rem;
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: 0.015rem;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .faq-item {
